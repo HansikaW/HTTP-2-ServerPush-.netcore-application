@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "HTTP2 Push";
+}
+
+@section scripts {
+    <script http-push src="/lib/jquery/dist/jquery.js"></script>
+    <script http-push src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+}
+
+@section styles {
+    <link http-push rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link http-push rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.css" />
+    <link http-push rel="stylesheet" href="/css/site.css" />
+    <link http-push rel="icon" type="image/jpg" href="~/images/push.jpg" sizes="16x16" />
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Loaded!</h4>
+            </div>
+            <div class="modal-body">
+                <!--<img http-push src="~/images/push.jpg" />-->
+                <p class = "red">Welcome Hansi!</p>
+                <p class = "thick green">If you're on a HTTPS, then this page was loaded with HTTP2 Push</p>
+                <a http-push href="/Home/About/">Click</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+    $(function () {
+        $(".modal").modal('show');
+    })</script>
